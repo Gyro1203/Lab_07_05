@@ -17,6 +17,11 @@ jobs:
         working-directory: client
       - run: npm run build
         working-directory: client
+
+  deploy:
+    needs: build  # Este job depende de que el job 'build' termine correctamente
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
