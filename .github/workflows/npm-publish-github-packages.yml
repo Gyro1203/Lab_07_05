@@ -14,9 +14,7 @@ jobs:
         with:
           node-version: 22.15.0
       - run: npm i
-        working-directory: Lab_07_05
       - run: npm run build
-        working-directory: Lab_07_05
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
